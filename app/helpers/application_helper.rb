@@ -12,4 +12,9 @@ module ApplicationHelper
     type = :success if bs.include? type
     "alert alert-#{type}"
   end
+
+  # NOTE: This is for demonstration only.
+  def current_user
+    User.first
+  end
 end

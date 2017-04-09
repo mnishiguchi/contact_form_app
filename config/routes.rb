@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'leads/index'
+  resource :contact
 
   resources :leads, only: [:index]
   resources :products

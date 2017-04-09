@@ -2,12 +2,12 @@
 #
 # Table name: leads
 #
-#  id         :integer          not null, primary key
-#  type       :integer
-#  source     :integer
-#  product_id :integer
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id          :integer          not null, primary key
+#  lead_type   :integer          not null
+#  lead_source :integer          not null
+#  product_id  :integer
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

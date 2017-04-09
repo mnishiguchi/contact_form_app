@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(version: 20170409135628) do
   enable_extension "plpgsql"
 
   create_table "leads", force: :cascade do |t|
-    t.integer "type"
-    t.integer "source"
+    t.integer "lead_type", null: false
+    t.integer "lead_source", null: false
     t.bigint "product_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
