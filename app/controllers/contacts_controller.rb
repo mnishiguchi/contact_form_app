@@ -1,5 +1,3 @@
-# Adopted from Go Rails
-# https://github.com/gorails-screencasts/gorails-episode-179/blob/master/app/controllers/contacts_controller.rb
 class ContactsController < ApplicationController
   def show
     @contact_form = ContactForm.new
@@ -7,7 +5,7 @@ class ContactsController < ApplicationController
 
   def create
     @contact_form = ContactForm.new(contact_form_params)
-    if @contact_form.save
+    if @contact_form.submit
       redirect_to root_path, notice: "Your message was sent! Thanks!"
     else
       render action: :show

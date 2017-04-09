@@ -14,6 +14,7 @@ class Lead < ApplicationRecord
   belongs_to :product, optional: true
 
   enum lead_type: {
+    :general      => 0,
     :availability => 1,
     :appointment  => 2,
   }

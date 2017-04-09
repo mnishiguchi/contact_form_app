@@ -1,24 +1,23 @@
-# Adopted from Go Rails
-# https://github.com/gorails-screencasts/gorails-episode-179/blob/master/app/models/contact_form.rb
 class ContactForm
   include ActiveModel::Model
 
   attr_accessor :name, :email, :body, :join_mailing_list
 
-  validates :name, :email, :body, presence: true
+  validates :name, :email, presence: true
 
-  def save
+  def submit
     if valid?
       # Do something on success, such as:
       # - initiating the logic to take care of the user.
       # - sending email async
       # - adding it to statistics
 
-      Lead.first_or_create!(
-        lead_type: 1,
-        lead_source: 1,
-        product_id: nil,
-      )
+      begin
+        Lead.create!(lead_type: "general", lead_source: "website")
+      rescue RuntimeError => error
+        Rails.logger.error("Error creating a lead: #{error}")
+      end
+
       true
     else
       false

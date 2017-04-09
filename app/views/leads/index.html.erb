@@ -1,18 +1,19 @@
 <h1>Leads</h1>
 
-<table class="table table-bordered">
-  <thead>
-    <tr>
-      <th>Updated at</th>
-      <th>Type</th>
-      <th>Source</th>
-      <th>Product id (optional)</th>
-      <th>Product name (optional)</th>
-    </tr>
-  </thead>
+<div class="table-responsive">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Updated at</th>
+        <th>Type</th>
+        <th>Source</th>
+        <th>Product id</th>
+        <th>Product name</th>
+      </tr>
+    </thead>
 
-  <tbody>
-    <% @leads.each do |lead| %>
+    <tbody>
+      <% @leads.each do |lead| %>
       <tr>
         <td><%= lead.updated_at %></td>
         <td><%= lead.lead_type %></td>
@@ -20,6 +21,7 @@
         <td><%= lead.product&.id %></td>
         <td><%= lead.product&.name %></td>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+      <% end %>
+    </tbody>
+  </table>
+</div>
