@@ -1,0 +1,23 @@
+<h1>Leads</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Source</th>
+      <th>Product id</th>
+      <th>Product name</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @leads.each do |lead| %>
+      <tr>
+        <td><%= lead.type %></td>
+        <td><%= lead.source %></td>
+        <td><%= lead.product.id %></td>
+        <td><%= lead.product.name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

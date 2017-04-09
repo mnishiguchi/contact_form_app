@@ -1,24 +1,15 @@
-# README
+# Form object app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+---
 
-Things you may want to cover:
+## Dependencies
+- Ruby 2.3.1
+- Rails 5.1.0.rc1
+- Turbolinks
+- and much more
 
-* Ruby version
+---
 
-* System dependencies
+## Database structure
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![](erd/erd.jpg)
